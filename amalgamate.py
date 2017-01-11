@@ -130,7 +130,7 @@ Generate a single amalgated source and header file from the sources.
     parser.allow_interspersed_args = False
     parser.add_option("-s", "--source", dest="target_source_path", action="store", default="dist/jsoncpp.cpp",
         help="""Output .cpp source path. [Default: %default]""")
-    parser.add_option("-i", "--include", dest="header_include_path", action="store", default="json/json.h",
+    parser.add_option("-i", "--include", dest="header_include_path", action="store", default="jsoncpp.h",
         help="""Header include path. Used to include the header from the amalgated source file. [Default: %default]""")
     parser.add_option("-t", "--top-dir", dest="top_dir", action="store", default=os.getcwd(),
         help="""Source top-directory. [Default: %default]""")
