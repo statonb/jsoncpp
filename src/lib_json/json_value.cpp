@@ -360,7 +360,10 @@ Value::Value(const Value& other)
     break;
 #endif
   default:
-    JSON_ASSERT_UNREACHABLE;
+    // JSON_ASSERT_UNREACHABLE;
+    char tmp[80];
+    sprintf(tmp, "Bad JSON type %d", (int)type_);
+    JSON_FAIL_MESSAGE(tmp);
   }
   if (other.comments_) {
     comments_ = new CommentInfo[numberOfCommentPlacement];
